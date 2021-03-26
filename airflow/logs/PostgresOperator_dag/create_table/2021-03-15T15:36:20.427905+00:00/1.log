@@ -1,0 +1,31 @@
+[2021-03-15 15:36:21,633] {taskinstance.py:851} INFO - Dependencies all met for <TaskInstance: PostgresOperator_dag.create_table 2021-03-15T15:36:20.427905+00:00 [queued]>
+[2021-03-15 15:36:21,653] {taskinstance.py:851} INFO - Dependencies all met for <TaskInstance: PostgresOperator_dag.create_table 2021-03-15T15:36:20.427905+00:00 [queued]>
+[2021-03-15 15:36:21,653] {taskinstance.py:1042} INFO - 
+--------------------------------------------------------------------------------
+[2021-03-15 15:36:21,654] {taskinstance.py:1043} INFO - Starting attempt 1 of 1
+[2021-03-15 15:36:21,655] {taskinstance.py:1044} INFO - 
+--------------------------------------------------------------------------------
+[2021-03-15 15:36:21,665] {taskinstance.py:1063} INFO - Executing <Task(PostgresOperator): create_table> on 2021-03-15T15:36:20.427905+00:00
+[2021-03-15 15:36:21,668] {standard_task_runner.py:52} INFO - Started process 52 to run task
+[2021-03-15 15:36:21,673] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'PostgresOperator_dag', 'create_table', '2021-03-15T15:36:20.427905+00:00', '--job-id', '6', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/first.py', '--cfg-path', '/tmp/tmpbgpdl_y1', '--error-file', '/tmp/tmpqexgie8r']
+[2021-03-15 15:36:21,674] {standard_task_runner.py:77} INFO - Job 6: Subtask create_table
+[2021-03-15 15:36:21,719] {logging_mixin.py:104} INFO - Running <TaskInstance: PostgresOperator_dag.create_table 2021-03-15T15:36:20.427905+00:00 [running]> on host 813d4b64061a
+[2021-03-15 15:36:21,761] {taskinstance.py:1257} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=PostgresOperator_dag
+AIRFLOW_CTX_TASK_ID=create_table
+AIRFLOW_CTX_EXECUTION_DATE=2021-03-15T15:36:20.427905+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2021-03-15T15:36:20.427905+00:00
+[2021-03-15 15:36:21,763] {postgres.py:69} INFO - Executing: CREATE TABLE IF NOT EXISTS user_table(
+            id integer NOT NULL, email VARCHAR, active BOOLEAN
+            );
+[2021-03-15 15:36:21,774] {base.py:74} INFO - Using connection to: id: postgresql. Host: db, Port: 5432, Schema: airflow, Login: postgres, Password: XXXXXXXX, extra: None
+[2021-03-15 15:36:21,777] {dbapi.py:180} INFO - Running statement: CREATE TABLE IF NOT EXISTS user_table(
+            id integer NOT NULL, email VARCHAR, active BOOLEAN
+            );, parameters: None
+[2021-03-15 15:36:21,778] {dbapi.py:186} INFO - Rows affected: -1
+[2021-03-15 15:36:21,781] {postgres.py:73} INFO - NOTICE:  relation "user_table" already exists, skipping
+
+[2021-03-15 15:36:21,792] {taskinstance.py:1166} INFO - Marking task as SUCCESS. dag_id=PostgresOperator_dag, task_id=create_table, execution_date=20210315T153620, start_date=20210315T153621, end_date=20210315T153621
+[2021-03-15 15:36:21,817] {taskinstance.py:1220} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2021-03-15 15:36:21,848] {local_task_job.py:146} INFO - Task exited with return code 0

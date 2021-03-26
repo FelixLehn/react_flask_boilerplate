@@ -1,0 +1,14 @@
+[2021-03-19 15:01:24,030] {scheduler_job.py:182} INFO - Started process (PID=29) to work on /opt/airflow/dags/first.py
+[2021-03-19 15:01:24,038] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/first.py for tasks to queue
+[2021-03-19 15:01:24,042] {logging_mixin.py:104} INFO - [2021-03-19 15:01:24,042] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/first.py
+[2021-03-19 15:01:24,164] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['PostgresOperator_dag']) retrieved from /opt/airflow/dags/first.py
+[2021-03-19 15:01:24,292] {logging_mixin.py:104} INFO - [2021-03-19 15:01:24,291] {dag.py:1818} INFO - Sync 1 DAGs
+[2021-03-19 15:01:24,384] {logging_mixin.py:104} INFO - [2021-03-19 15:01:24,384] {dag.py:2273} INFO - Setting next_dagrun for PostgresOperator_dag to None
+[2021-03-19 15:01:24,435] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/first.py took 0.433 seconds
+[2021-03-19 15:01:55,433] {scheduler_job.py:182} INFO - Started process (PID=60) to work on /opt/airflow/dags/first.py
+[2021-03-19 15:01:55,435] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/first.py for tasks to queue
+[2021-03-19 15:01:55,436] {logging_mixin.py:104} INFO - [2021-03-19 15:01:55,436] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/first.py
+[2021-03-19 15:01:55,466] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['PostgresOperator_dag']) retrieved from /opt/airflow/dags/first.py
+[2021-03-19 15:01:55,493] {logging_mixin.py:104} INFO - [2021-03-19 15:01:55,493] {dag.py:1818} INFO - Sync 1 DAGs
+[2021-03-19 15:01:55,510] {logging_mixin.py:104} INFO - [2021-03-19 15:01:55,510] {dag.py:2273} INFO - Setting next_dagrun for PostgresOperator_dag to None
+[2021-03-19 15:01:55,519] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/first.py took 0.091 seconds

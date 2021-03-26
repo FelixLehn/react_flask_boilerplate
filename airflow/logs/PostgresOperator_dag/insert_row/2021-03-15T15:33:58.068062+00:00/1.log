@@ -1,0 +1,41 @@
+[2021-03-15 15:33:59,135] {taskinstance.py:851} INFO - Dependencies all met for <TaskInstance: PostgresOperator_dag.insert_row 2021-03-15T15:33:58.068062+00:00 [queued]>
+[2021-03-15 15:33:59,156] {taskinstance.py:851} INFO - Dependencies all met for <TaskInstance: PostgresOperator_dag.insert_row 2021-03-15T15:33:58.068062+00:00 [queued]>
+[2021-03-15 15:33:59,157] {taskinstance.py:1042} INFO - 
+--------------------------------------------------------------------------------
+[2021-03-15 15:33:59,157] {taskinstance.py:1043} INFO - Starting attempt 1 of 1
+[2021-03-15 15:33:59,158] {taskinstance.py:1044} INFO - 
+--------------------------------------------------------------------------------
+[2021-03-15 15:33:59,167] {taskinstance.py:1063} INFO - Executing <Task(PostgresOperator): insert_row> on 2021-03-15T15:33:58.068062+00:00
+[2021-03-15 15:33:59,171] {standard_task_runner.py:52} INFO - Started process 48 to run task
+[2021-03-15 15:33:59,175] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'PostgresOperator_dag', 'insert_row', '2021-03-15T15:33:58.068062+00:00', '--job-id', '5', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/first.py', '--cfg-path', '/tmp/tmp7ow88an5', '--error-file', '/tmp/tmpf8pw82rx']
+[2021-03-15 15:33:59,177] {standard_task_runner.py:77} INFO - Job 5: Subtask insert_row
+[2021-03-15 15:33:59,223] {logging_mixin.py:104} INFO - Running <TaskInstance: PostgresOperator_dag.insert_row 2021-03-15T15:33:58.068062+00:00 [running]> on host 813d4b64061a
+[2021-03-15 15:33:59,265] {taskinstance.py:1257} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=PostgresOperator_dag
+AIRFLOW_CTX_TASK_ID=insert_row
+AIRFLOW_CTX_EXECUTION_DATE=2021-03-15T15:33:58.068062+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2021-03-15T15:33:58.068062+00:00
+[2021-03-15 15:33:59,266] {postgres.py:69} INFO - Executing: INSERT INTO user_table VALUES(%s, %s, %s)
+[2021-03-15 15:33:59,277] {base.py:74} INFO - Using connection to: id: postgresql. Host: db, Port: 5432, Schema: airflow, Login: postgres, Password: XXXXXXXX, extra: None
+[2021-03-15 15:33:59,281] {dbapi.py:180} INFO - Running statement: INSERT INTO user_table VALUES(%s, %s, %s), parameters: (93566336, 'felix_airflow@works.com', True)
+[2021-03-15 15:33:59,283] {taskinstance.py:1455} ERROR - relation "user_table" does not exist
+LINE 1: INSERT INTO user_table VALUES(93566336, 'felix_airflow@works...
+                    ^
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1112, in _run_raw_task
+    self._prepare_and_execute_task_with_callbacks(context, task)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1285, in _prepare_and_execute_task_with_callbacks
+    result = self._execute_task(context, task_copy)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1315, in _execute_task
+    result = task_copy.execute(context=context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/providers/postgres/operators/postgres.py", line 71, in execute
+    self.hook.run(self.sql, self.autocommit, parameters=self.parameters)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/hooks/dbapi.py", line 182, in run
+    cur.execute(sql_statement, parameters)
+psycopg2.errors.UndefinedTable: relation "user_table" does not exist
+LINE 1: INSERT INTO user_table VALUES(93566336, 'felix_airflow@works...
+                    ^
+
+[2021-03-15 15:33:59,285] {taskinstance.py:1503} INFO - Marking task as FAILED. dag_id=PostgresOperator_dag, task_id=insert_row, execution_date=20210315T153358, start_date=20210315T153359, end_date=20210315T153359
+[2021-03-15 15:33:59,312] {local_task_job.py:146} INFO - Task exited with return code 1

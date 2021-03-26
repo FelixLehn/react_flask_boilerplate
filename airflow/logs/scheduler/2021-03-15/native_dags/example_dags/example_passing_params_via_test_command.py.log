@@ -1,0 +1,22 @@
+[2021-03-15 17:27:37,757] {scheduler_job.py:182} INFO - Started process (PID=46) to work on /home/airflow/.local/lib/python3.6/site-packages/airflow/example_dags/example_passing_params_via_test_command.py
+[2021-03-15 17:27:37,760] {scheduler_job.py:629} INFO - Processing file /home/airflow/.local/lib/python3.6/site-packages/airflow/example_dags/example_passing_params_via_test_command.py for tasks to queue
+[2021-03-15 17:27:37,762] {logging_mixin.py:104} INFO - [2021-03-15 17:27:37,762] {dagbag.py:448} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.6/site-packages/airflow/example_dags/example_passing_params_via_test_command.py
+[2021-03-15 17:27:37,792] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['example_passing_params_via_test_command']) retrieved from /home/airflow/.local/lib/python3.6/site-packages/airflow/example_dags/example_passing_params_via_test_command.py
+[2021-03-15 17:27:37,835] {logging_mixin.py:104} INFO - [2021-03-15 17:27:37,834] {dag.py:1818} INFO - Sync 1 DAGs
+[2021-03-15 17:27:37,880] {logging_mixin.py:104} INFO - [2021-03-15 17:27:37,880] {dag.py:1837} INFO - Creating ORM DAG for example_passing_params_via_test_command
+[2021-03-15 17:27:37,958] {logging_mixin.py:104} INFO - [2021-03-15 17:27:37,958] {dag.py:2273} INFO - Setting next_dagrun for example_passing_params_via_test_command to 2021-03-14 00:00:00+00:00
+[2021-03-15 17:27:37,981] {scheduler_job.py:190} INFO - Processing /home/airflow/.local/lib/python3.6/site-packages/airflow/example_dags/example_passing_params_via_test_command.py took 0.230 seconds
+[2021-03-15 17:28:08,710] {scheduler_job.py:182} INFO - Started process (PID=73) to work on /home/airflow/.local/lib/python3.6/site-packages/airflow/example_dags/example_passing_params_via_test_command.py
+[2021-03-15 17:28:08,713] {scheduler_job.py:629} INFO - Processing file /home/airflow/.local/lib/python3.6/site-packages/airflow/example_dags/example_passing_params_via_test_command.py for tasks to queue
+[2021-03-15 17:28:08,714] {logging_mixin.py:104} INFO - [2021-03-15 17:28:08,714] {dagbag.py:448} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.6/site-packages/airflow/example_dags/example_passing_params_via_test_command.py
+[2021-03-15 17:28:08,736] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['example_passing_params_via_test_command']) retrieved from /home/airflow/.local/lib/python3.6/site-packages/airflow/example_dags/example_passing_params_via_test_command.py
+[2021-03-15 17:28:08,767] {logging_mixin.py:104} INFO - [2021-03-15 17:28:08,767] {dag.py:1818} INFO - Sync 1 DAGs
+[2021-03-15 17:28:08,814] {logging_mixin.py:104} INFO - [2021-03-15 17:28:08,814] {dag.py:2273} INFO - Setting next_dagrun for example_passing_params_via_test_command to 2021-03-14 00:00:00+00:00
+[2021-03-15 17:28:08,825] {scheduler_job.py:190} INFO - Processing /home/airflow/.local/lib/python3.6/site-packages/airflow/example_dags/example_passing_params_via_test_command.py took 0.122 seconds
+[2021-03-15 17:28:39,190] {scheduler_job.py:182} INFO - Started process (PID=105) to work on /home/airflow/.local/lib/python3.6/site-packages/airflow/example_dags/example_passing_params_via_test_command.py
+[2021-03-15 17:28:39,192] {scheduler_job.py:629} INFO - Processing file /home/airflow/.local/lib/python3.6/site-packages/airflow/example_dags/example_passing_params_via_test_command.py for tasks to queue
+[2021-03-15 17:28:39,193] {logging_mixin.py:104} INFO - [2021-03-15 17:28:39,193] {dagbag.py:448} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.6/site-packages/airflow/example_dags/example_passing_params_via_test_command.py
+[2021-03-15 17:28:39,213] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['example_passing_params_via_test_command']) retrieved from /home/airflow/.local/lib/python3.6/site-packages/airflow/example_dags/example_passing_params_via_test_command.py
+[2021-03-15 17:28:39,236] {logging_mixin.py:104} INFO - [2021-03-15 17:28:39,235] {dag.py:1818} INFO - Sync 1 DAGs
+[2021-03-15 17:28:39,268] {logging_mixin.py:104} INFO - [2021-03-15 17:28:39,268] {dag.py:2273} INFO - Setting next_dagrun for example_passing_params_via_test_command to 2021-03-14 00:00:00+00:00
+[2021-03-15 17:28:39,278] {scheduler_job.py:190} INFO - Processing /home/airflow/.local/lib/python3.6/site-packages/airflow/example_dags/example_passing_params_via_test_command.py took 0.092 seconds

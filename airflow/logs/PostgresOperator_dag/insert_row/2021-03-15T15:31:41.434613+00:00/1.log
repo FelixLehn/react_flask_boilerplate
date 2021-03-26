@@ -1,0 +1,40 @@
+[2021-03-15 15:31:42,498] {taskinstance.py:851} INFO - Dependencies all met for <TaskInstance: PostgresOperator_dag.insert_row 2021-03-15T15:31:41.434613+00:00 [queued]>
+[2021-03-15 15:31:42,519] {taskinstance.py:851} INFO - Dependencies all met for <TaskInstance: PostgresOperator_dag.insert_row 2021-03-15T15:31:41.434613+00:00 [queued]>
+[2021-03-15 15:31:42,519] {taskinstance.py:1042} INFO - 
+--------------------------------------------------------------------------------
+[2021-03-15 15:31:42,520] {taskinstance.py:1043} INFO - Starting attempt 1 of 1
+[2021-03-15 15:31:42,521] {taskinstance.py:1044} INFO - 
+--------------------------------------------------------------------------------
+[2021-03-15 15:31:42,528] {taskinstance.py:1063} INFO - Executing <Task(PostgresOperator): insert_row> on 2021-03-15T15:31:41.434613+00:00
+[2021-03-15 15:31:42,532] {standard_task_runner.py:52} INFO - Started process 44 to run task
+[2021-03-15 15:31:42,541] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'PostgresOperator_dag', 'insert_row', '2021-03-15T15:31:41.434613+00:00', '--job-id', '3', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/first.py', '--cfg-path', '/tmp/tmp8plfrlsm', '--error-file', '/tmp/tmp3qasigrh']
+[2021-03-15 15:31:42,543] {standard_task_runner.py:77} INFO - Job 3: Subtask insert_row
+[2021-03-15 15:31:42,604] {logging_mixin.py:104} INFO - Running <TaskInstance: PostgresOperator_dag.insert_row 2021-03-15T15:31:41.434613+00:00 [running]> on host 813d4b64061a
+[2021-03-15 15:31:42,686] {taskinstance.py:1257} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=PostgresOperator_dag
+AIRFLOW_CTX_TASK_ID=insert_row
+AIRFLOW_CTX_EXECUTION_DATE=2021-03-15T15:31:41.434613+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2021-03-15T15:31:41.434613+00:00
+[2021-03-15 15:31:42,689] {postgres.py:69} INFO - Executing: INSERT INTO user_table VALUES(%s, %s, %s)
+[2021-03-15 15:31:42,716] {taskinstance.py:1455} ERROR - The conn_id `postgresql` isn't defined
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1112, in _run_raw_task
+    self._prepare_and_execute_task_with_callbacks(context, task)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1285, in _prepare_and_execute_task_with_callbacks
+    result = self._execute_task(context, task_copy)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1315, in _execute_task
+    result = task_copy.execute(context=context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/providers/postgres/operators/postgres.py", line 71, in execute
+    self.hook.run(self.sql, self.autocommit, parameters=self.parameters)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/hooks/dbapi.py", line 173, in run
+    with closing(self.get_conn()) as conn:
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/providers/postgres/hooks/postgres.py", line 83, in get_conn
+    conn = self.connection or self.get_connection(conn_id)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/hooks/base.py", line 63, in get_connection
+    conn = Connection.get_connection_from_secrets(conn_id)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/connection.py", line 354, in get_connection_from_secrets
+    raise AirflowNotFoundException(f"The conn_id `{conn_id}` isn't defined")
+airflow.exceptions.AirflowNotFoundException: The conn_id `postgresql` isn't defined
+[2021-03-15 15:31:42,722] {taskinstance.py:1503} INFO - Marking task as FAILED. dag_id=PostgresOperator_dag, task_id=insert_row, execution_date=20210315T153141, start_date=20210315T153142, end_date=20210315T153142
+[2021-03-15 15:31:42,799] {local_task_job.py:146} INFO - Task exited with return code 1
