@@ -9,7 +9,7 @@ Das Aufsetzen der Development Umgebung ist durch docker-compose vereinfacht word
 Installationsschritte:
 1. Den Git-Branch master pullen: 
 ```
-git clone https://code.eu.idealo.com/scm/condev/import-hub.git
+git clone https://github.com/FelixLehn/react_flask_boilerplate.git
 ```
 2. 
 ```
